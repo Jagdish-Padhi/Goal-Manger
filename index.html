@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Goals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Iceland&family=Kanit:wght@500&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nerko+One&family=Nosifer&family=Poetsen+One&family=Prosto+One&family=Protest+Strike&family=Reggae+One&family=Trade+Winds&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="heading">
+        <h1>Daily Goals Manager</h1>
+    </div>
+
+    <div id="top-line">
+        <p>
+            <b>◼️ What do you want to do today ?</b>
+        </p>
+    </div>
+
+
+    <div id="top-btn">
+        <label for="goal"> </label>
+        <input type="text" name="goal" id="goal" placeholder="Type here...." maxlength="50" target="" />
+        <button type="submit" id="Save">Add</button>
+        <button type="clear" id="clear" onclick="clearAll()"> Clear</button>
+
+    </div>
+
+
+
+    <div id="goal_container">
+        <ul id="list">
+
+        </ul>
+    </div>
+</body>
+<script src="app.js"></script>
+
+</html>

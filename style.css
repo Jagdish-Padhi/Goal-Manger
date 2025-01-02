@@ -1,0 +1,95 @@
+* {
+  background-color: rgb(255, 254, 202);
+}
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+#top-line {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: large;
+}
+
+@keyframes colors {
+  from {
+    color: rgb(217, 0, 0);
+  }
+  to {
+    color: rgb(4, 0, 131);
+  }
+}
+
+#top-btn {
+  margin-left: 5vw;
+  gap: 3px;
+}
+
+#heading {
+  text-align: center;
+
+  font-family: "Trade Winds", serif;
+  font-weight: 400;
+  font-style: normal;
+  animation: colors 0.5s alternate-reverse infinite;
+  transition: scale linear 2s ease;
+}
+
+#Save {
+  background-color: rgb(173, 255, 245);
+  font-weight: 700;
+}
+
+#clear {
+  background-color: rgb(241, 222, 209);
+  font-weight: 700;
+}
+
+#goal {
+  background-color: rgb(255, 255, 255);
+}
+
+#Save,
+#goal,
+#clear,
+#editSave {
+  border-radius: 6px;
+  padding: 0.3rem;
+  font-size: 1rem;
+  color: darkblue;
+}
+
+#list {
+  color: rgb(0, 5, 51);
+  font-size: 130%;
+  font-family: "Poetsen One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mark {
+  border-radius: 6px;
+  padding: 4px;
+  margin: 0.5vw;
+  font-weight: 600;
+}
+
+#delete {
+  background-color: rgb(255, 106, 106);
+}
+
+#edit {
+  background-color: rgb(200, 200, 255);
+}
+
+#completed {
+  background-color: rgb(255, 255, 255);
+}
+
+#Backlog {
+  background-color: rgb(217, 217, 217);
+}
