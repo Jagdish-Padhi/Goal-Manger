@@ -43,7 +43,7 @@
   <hr>
 
   <h2>🌟Linkedin Profile link</h2>
-  <a href="www.linkedin.com/in/jagdish-padhi-b21114325">Click here!</a>
+   www.linkedin.com/in/jagdish-padhi-b21114325
 
   
 
