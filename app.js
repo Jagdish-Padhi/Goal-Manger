@@ -3,19 +3,27 @@ let save = document.querySelector("#Save");
 //learnt: avoid to store trimed value directly in var
 // let goal = document.querySelector("#goal").value.trim();
 
+document.addEventListener("DOMContentLoaded", ()=>{
+  const StoredList = localStorage.getItem("storedList");
+  if(StoredList){
+    document.querySelector("#list").innerHTML = StoredList;
+  }
+})
+
+
 //for zoom effect
 const btnZoom = (btn) => {
   btn.style.transform = "scale(1.1)";
   btn.style.border = "2px solid black";
   btn.style.transition = "transform 0.2s ease";
 
-  
   //come back to initial state
   setTimeout(() => {
     btn.style.transform = "scale(1)";
     btn.style.border = "1.5px solid black";
   }, 200);
 };
+
 
 //function to clear all
 const clearAll = () => {
@@ -33,6 +41,7 @@ const clearAll = () => {
   let clear = document.querySelector("#clear");
   btnZoom(clear);
 };
+
 
 //function to add goals in list
 const addGoal = () => {
@@ -56,7 +65,8 @@ const addGoal = () => {
   document.querySelector("#goal").value = "";
 
   //add items to new list
-  return document.querySelector("#list").appendChild(listItem);
+  let addedList = document.querySelector("#list").appendChild(listItem);
+  return addedList;
 };
 
 //Imp Idea learnt to undo any process like....
@@ -75,8 +85,9 @@ document.body.addEventListener("click", (event) => {
     btnZoom(event.target);
   }
 
-  //to delete buttons
+  //to delete Goals
   if (event.target.id === "delete") {
+    alert(" Alert : You are deleting a goal !");
     event.target.closest("li").remove();
   }
 
@@ -148,4 +159,9 @@ document.body.addEventListener("click", (event) => {
     event.target.style.backgroundColor = "rgb(253, 164, 74)";
     event.target.innerText = "Backlog";
   }
+
+ 
+  let storeList = document.querySelector("#list");
+  localStorage.setItem("storedList", storeList.innerHTML);
 });
+
